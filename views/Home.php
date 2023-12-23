@@ -1,8 +1,7 @@
 <?php
 
-require_once '../controllers/SocialMediaController.php';
-require_once '../controllers/NavbarController.php';
-
+require_once($_SERVER['DOCUMENT_ROOT'] . '/Tdw_Projet/controllers/SocialMediaController.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/Tdw_Projet/controllers/NavbarController.php');
 
 ?>
 <!DOCTYPE html>
@@ -30,6 +29,17 @@ require_once '../controllers/NavbarController.php';
                     <img src="<?php echo $media['image']; ?>" alt="<?php echo $media['name']; ?>">
                 </a>
             <?php endforeach; ?>
+        </div>
+        <div class="py-2">
+                        <ul class="d-flex gap-4 justify-content-around footer-socialMedia mx-auto pt-1">
+                            <?php
+                            foreach ($data['socialmedia'] as $link) {
+                            ?>
+                                <li><a href="/ProjetWeb<?php echo $link['href'] ?>" class="text-decoration-none text-light"><img class="d-block " src="public/images/socialMedia/<?php echo $link["icon"] ?>" width="20px" alt="" /></a></li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
         </div>
 
         <!-- Diaporama d'images -->
