@@ -1,0 +1,22 @@
+.menu {
+    background-color: #882424; /* Couleur de fond du menu */
+    position: sticky; /*le menu reste collé au bord supérieur de la fenêtre.*/
+    top: 0; /*Signifie qu'il reste au sommet de la fenêtre*/
+    z-index: 100;/*assure que le menu est au-dessus du contenu de la page.*/
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
